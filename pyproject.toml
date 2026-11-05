@@ -22,17 +22,18 @@ testpaths = ["tests"]
 [tool.ruff]
 line-length = 120
 target-version = "py311"
+
+[tool.ruff.lint]
 select = ["E", "F", "I", "W", "UP", "C4", "C90", "PT", "PTH", "RUF", "TRY", "TCH", "SIM", "PIE", "PL", "RET"]
 ignore = [
     "E701", "E702", "E401", "F401",
     "TRY003", "TRY004", "TRY300", "TRY301",
-    "PLR2004", "PLR0911", "PLR0912", "PLR0913", "PLR0915",
+    "PLR2004", "PLR0911", "PLR0912", "PLR0913", "PLR0915", "PLR0917",
     "C901",
     "PT015", "PT018", "PT019",
     "TC003",
     "SIM115", "PTH123",
     "PLW1510",
 ]
-"per-file-ignores" = {
-    "tests/*" = ["S101", "S106", "S110", "S311", "S603", "S607"]
-}
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S106", "S110", "S311", "S603", "S607"]

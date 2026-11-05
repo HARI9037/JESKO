@@ -35,15 +35,13 @@ class Ntfy:
 
 
 class Twilio:
-    def __init__(self, enabled, sid, token, sender, destination, timeout=5):
-        self.enabled, self.sid, self.token, self.sender, self.destination, self.timeout = (
-            enabled,
-            sid,
-            token,
-            sender,
-            destination,
-            timeout,
-        )
+    def __init__(self, enabled, sid, token, sender, destination, *, timeout=5):
+        self.enabled = enabled
+        self.sid = sid
+        self.token = token
+        self.sender = sender
+        self.destination = destination
+        self.timeout = timeout
 
     def twiml(self, message):
         return f"<Response><Say>{escape(message[:500])}</Say></Response>"

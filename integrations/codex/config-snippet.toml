@@ -1,0 +1,9 @@
+# Codex notify command for JESKO
+# Add this to your user-level Codex config.toml (~/.codex/config.toml or %USERPROFILE%\.codex\config.toml)
+#
+# The notify command receives the agent-turn-complete event as a JSON argument.
+# JESKO's codex adapter maps: thread-id -> session_id, turn-id -> turn_id,
+# cwd -> project_path (local only), last-assistant-message -> message_excerpt
+
+[notify]
+command = "jesko codex-notify"

@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "jesko ingest --adapter claude --stdin"
+      }
+    ],
+    "StopFailure": [
+      {
+        "type": "command",
+        "command": "jesko ingest --adapter claude --stdin"
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "type": "command",
+        "command": "jesko ingest --adapter claude --stdin"
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "type": "command",
+        "command": "jesko ingest --adapter claude --stdin"
+      }
+    ]
+  }
+}

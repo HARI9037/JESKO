@@ -1,0 +1,21 @@
+[app]
+name = "JESKO"
+timezone = "Asia/Kolkata"
+retention_days = 7
+[batching]
+debounce_seconds = 2
+max_wait_seconds = 8
+[policy]
+long_task_threshold_minutes = 10
+urgent_cooldown_minutes = 15
+[quiet_hours]
+enabled = true
+start = "22:00"
+end = "07:00"
+[summarization]
+enabled = false
+[ntfy]
+enabled = true
+server = "https://ntfy.sh"
+[twilio]
+enabled = false

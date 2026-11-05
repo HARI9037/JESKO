@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.sqlite3
+*.log
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+local-*.toml
+config.local.toml
